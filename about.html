@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoaib Arif | Portfolio</title>
+    <style>
+      /* General Body Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      /* Logo Style */
+      .nav-logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      #logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Hero Section Styles */
+      .hero-section {
+        text-align: center;
+        padding: 100px 20px;
+        background-image: url("assets/img/hero-bg.jpg"); /* Add your background image here */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        animation: rotateBackground 10s infinite linear;
+        color: #fff;
+        cursor: pointer;
+        height: 100vh; /* Full height */
+      }
+
+      @keyframes rotateBackground {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      .hero-section h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      .hero-section p {
+        font-size: 1.2rem;
+        margin: 0 0 10px;
+      }
+
+      .hero-section .note {
+        font-style: italic;
+        color: #ddd;
+        margin-top: 10px;
+      }
+
+      /* About Section Styles */
+      #about-section {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+        text-align: center;
+        background-color: #6c757d; /* Same color as hero section */
+        border-bottom: 1px solid #ddd;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        max-width: 1000px;
+        width: 90%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-content:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .about-image img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-text h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #6c757d;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .skills h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #6c757d;
+      }
+
+      .skills ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skills li {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        color: #555;
+      }
+
+      .contact-links {
+        margin-top: 20px;
+      }
+
+      .contact-link {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 1.2rem;
+        color: #6c757d;
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .contact-link:hover {
+        color: #495057;
+        transform: scale(1.1);
+      }
+
+      .contact-link i {
+        margin-right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .about-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .about-text {
+          max-width: 90%;
+        }
+
+        .about-image img {
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      /* Full Page Styling */
+      .section {
+        padding: 50px 20px;
+        background-color: #f8f9fa;
+      }
+
+      .section-heading {
+        text-align: center;
+        font-size: 2rem;
+        color: #6c757d;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Logo -->
+    <div class="nav-logo">
+      <a href="index.html"><img id="logo" src="assets/img/logo2.png" /></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero-section"
+      class="hero-section"
+      onclick="showAboutSection()"
+    >
+      <h1>I can't sleep!but</h1>
+      <h2>Good things take time.</h2>
+      <p>
+        I'm still working hard on putting together my personal portfolio, but I
+        promise it will be worth the wait.
+      </p>
+      <p class="note">
+        Thank you for your patience as I put the finishing touches on my
+        website.
+      </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="section">
+      <div class="about-content">
+        <!-- Profile Image -->
+        <div class="about-image">
+          <img src="assets/img/about-shoaib.jpg" alt="Shoaib Arif" />
+        </div>
+
+        <!-- About Text -->
+        <div class="about-text">
+          <h1>Hi, I'm Shoaib Arif</h1>
+          <p>
+            I'm a passionate Web Developer, AI Coding Trainer, and Problem
+            Solver with a keen interest in building scalable web applications
+            and exploring the world of Artificial Intelligence. <br /><br />
+            With experience in front-end technologies like React, JavaScript,
+            and CSS, along with a background in full-stack web development, I
+            strive to create intuitive, user-friendly web solutions.
+          </p>
+
+          <!-- Skills List -->
+          <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Tailwind CSS</li>
+              <li>AI Applications</li>
+              <li>Problem Solving</li>
+              <li>Database Design</li>
+            </ul>
+          </div>
+
+          <!-- Contact Links -->
+          <div class="contact-links">
+            <a href="mailto:shoaibarif16@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a
+              href="https://linkedin.com/in/shoaib-arif-9b253921a"
+              class="contact-link"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/shoaibarif1" class="contact-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showAboutSection() {
+        // Show About Section with fade-in effect
+        const aboutSection = document.getElementById("about-section");
+        aboutSection.style.display = "flex"; // Make it visible
+        setTimeout(() => {
+          aboutSection.style.opacity = 1; // Fade-in effect
+        }, 10);
+        // Hide Hero Section
+        document.getElementById("hero-section").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

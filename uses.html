@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Technologies and Tools used by Shoaib for development."
+    />
+    <title>Uses | Shoaib</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #fafafa;
+        padding: 0 20px;
+      }
+
+      /* Title */
+      .title {
+        font-size: 36px;
+        color: #333;
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      /* Description */
+      .description {
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      /* Icons Section */
+      .tech-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .tech-item {
+        background-color: #fff;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 8px;
+        width: 150px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .tech-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .tech-item i {
+        font-size: 40px;
+        color: #1e5b7c;
+        margin-bottom: 10px;
+      }
+
+      .tech-item p {
+        font-size: 16px;
+        color: #333;
+        font-weight: bold;
+      }
+      .nav-logo {
+        position: absolute;
+        top: 10px; /* Positioning from the top */
+        left: 10px; /* Positioning from the left */
+        width: 50px; /* Adjust the width to make the logo small */
+        height: 50px; /* Ensure the height is the same as the width for a perfect circle */
+        overflow: hidden; /* Hide any parts of the logo that go beyond the circle */
+        border-radius: 50%; /* This makes the logo round */
+      }
+
+      #logo {
+        width: 100%; /* Make sure the logo fills the container */
+        height: 80%; /* Ensure it covers the entire circular container */
+        padding: 6px;
+        object-fit: cover; /* Makes sure the logo fits within the circle without stretching */
+        margin-top: 5px;
+        border: 4px solid #444;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav-logo">
+      <a href="index.html"><img id="logo" src="assets/img/logo2.png" /></a>
+    </div>
+    <div class="container">
+      <h1 class="title">Technologies I Use</h1>
+      <p class="description">
+        Here are the tools, technologies, and frameworks I rely on to create
+        amazing projects.
+      </p>
+
+      <div class="tech-icons">
+        <!-- Frontend Technologies -->
+        <div class="tech-item">
+          <i class="fab fa-html5"></i>
+          <p>HTML5</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-css3-alt"></i>
+          <p>CSS3</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-js-square"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-react"></i>
+          <p>React</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-tailwindcss"></i>
+          <p>Tailwind CSS</p>
+        </div>
+
+        <!-- Backend Technologies -->
+        <div class="tech-item">
+          <i class="fab fa-node"></i>
+          <p>Node.js</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-docker"></i>
+          <p>Docker</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-python"></i>
+          <p>Python</p>
+        </div>
+
+        <!-- Tools and Platforms -->
+        <div class="tech-item">
+          <i class="fab fa-github"></i>
+          <p>GitHub</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-aws"></i>
+          <p>AWS</p>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-git"></i>
+          <p>Git</p>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-database"></i>
+          <p>SQL</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
